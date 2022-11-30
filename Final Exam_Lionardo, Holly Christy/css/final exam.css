@@ -1,0 +1,205 @@
+body {
+    background-color: rgba(250, 235, 215, 0.831);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.map {
+    width: 900px;
+    height: 450px;
+}
+
+/* CSS Beasiswa */
+.beasiswa {
+    color: white;
+    background-image: url(../img/beasiswa.png);
+    background-size: cover;
+
+}
+
+.container_beasiswa {
+    margin: 50px;
+}
+
+.beasiswa_content:hover {
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.tabel_beasiswa:hover {
+    box-shadow: rgba(255, 255, 255, 0.881) 0px 20px 30px -10px;
+    transition: .5s;
+
+}
+
+/* CSS Kontak */
+
+
+.kontak {
+    background-image: url(../img/bg_about.png);
+    background-size: cover;
+    color: white;
+}
+
+.kontak_content {
+    margin: 50px;
+}
+
+.tabel_kontak:hover {
+    background-color: rgba(255, 255, 255, 0.653);
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px; 
+    color: black;
+    transition: .5s;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.map:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: .5s;
+}
+
+
+/* CSS Tentang */
+.tabel-tr {
+    background-image: url(../img/bg_tentang.png);
+    background-size: cover;
+}
+
+.tentang_content {
+    margin: 50px;
+}
+
+.tentang h1 {
+    color: white;
+}
+
+.tentang img {
+    padding: 50px;
+}
+
+.tentang:hover,
+.p-sejarah:hover,
+.p-warisan:hover,
+.p-visi:hover,
+.p-misi:hover,
+.p-tujuan:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* CSS NAVBAR */
+
+.header {
+    overflow: hidden;
+    background-color: rgba(210, 105, 30, 0.881);
+    padding: 20px 10px;
+
+}
+
+ 
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.header a:hover {
+    background-color: #5bae7e;
+    color: black;
+    transition: .5s;
+}
+
+
+.header a.active {
+    background-color: #27ae60;
+    color: white;
+}
+
+
+.header-right {
+    float: right;
+}
+
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .map {
+        width: 275px;
+        height: 275px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 641px) and (max-width:1007px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .map {
+        width: 475px;
+        height: 375px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .kontak_content, .container_beasiswa, .tentang_content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns: minmax(25px, 1fr) 16em;
+        grid-template-rows: auto min-height 5em;
+    }
+}
